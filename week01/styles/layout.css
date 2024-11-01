@@ -1,0 +1,87 @@
+/* Básic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, Helvetica, serif;
+}
+
+/* Grid styles */
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Areas styles */
+.header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: #0077B6;
+    color: white;
+    text-align: left;
+    padding: 0;
+}
+
+/* Header container styles */
+.header-content {
+    padding: 20px;
+}
+
+/* Menu styles */
+.menu {
+    background-color: #03045E;
+    width: 100%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+/* Main styles */
+.main {
+    grid-area: main;
+    background-color: #00B4D8;
+    padding: 20px;
+}
+
+/* Aside styles */
+.aside {
+    grid-area: aside;
+    background-color: #90E0EF;
+    padding: 20px;
+}
+
+/* Footer styles */
+.footer {
+    grid-area: footer;
+    background-color: #0077B6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
