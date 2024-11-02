@@ -18,28 +18,35 @@ body {
 /* Header, Main, and Footer Width */
 header, main, footer {
     width: 100%;
-    max-width: 1000px; /* Same width as main */
+    max-width: 1000px;
     margin: 0 auto;
-    padding: 10px; /* Relleno para los contenedores */
+    padding: 10px;
 }
 
 /* Header and Navigation */
 header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #0c3d5e;
     color: #fff;
     text-align: center;
+    margin-top: 5px;
+    padding: 5px 0 0 0;
+    height: auto;
 }
 
-header h1 {
-    font-size: 2em; /* Aumenta el tamaño del título */
+h1 {
+    font-size: 1.5em;
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly; /* Centra los enlaces en la nav */
-    gap: 20px; /* Espaciado entre los enlaces */
-    margin-top: 10px;
+    justify-content: space-evenly;
+    background-color: #1f6adb;
+    padding: 10px 0;
+    z-index: 1; /* Asegurarse de que esté visible */
 }
 
 nav a {
@@ -50,15 +57,17 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #335d7e;
+    background-color: #9acbf0;
     border-radius: 5px;
+    color: #0c3d5e;
 }
 
 /* Main Layout with Grid */
 main {
     display: grid;
-    grid-template-columns: 1fr; /* Un solo columna por defecto */
+    grid-template-columns: 1fr;
     gap: 20px;
+    max-height: fit-content;
     padding: 20px;
     background-color: #f9f9f9;
 }
@@ -76,14 +85,15 @@ h2 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 10px;
+    padding: 7px;
 }
 
-.aboutme, .country {
-    p {
-        line-height: 1.5; /* Incrementa el espacio entre líneas */
-    }
-    
+.aboutme p, .country p {
+    line-height: 1.5;
+}
+
+.aboutme {
+    align-items: center;
 }
 
 .profile-photo {
@@ -91,13 +101,17 @@ h2 {
     max-width: 100px;
     max-height: 100px;
     height: auto;
-    border-radius: 40%;
+    border-radius: 10%;
     display: block;
     margin: 5px 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Right Section (card) */
 .card {
+    display: flex;
+    flex-direction: column;
+    height: auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -105,7 +119,11 @@ h2 {
 }
 
 .card ul {
-    margin-left: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: center;
 }
 
 .card li {
@@ -113,7 +131,7 @@ h2 {
 }
 
 .card a {
-    text-decoration:#1f6adb;
+    text-decoration: none; /* Corrige para que no aplique text-decoration: #1f6adb */
     font-size: 20px;
 }
 
@@ -124,7 +142,7 @@ h2 {
 /* Location Text */
 .location {
     text-align: center;
-    margin: 10px 0; /* Espacio alrededor del texto de ubicación */
+    margin: 10px 0;
 }
 
 /* Footer */
@@ -137,30 +155,46 @@ footer {
     margin-top: 0;
 }
 
+#lastmodified {
+    color: #f6f397;
+}
+
 /* Media Queries for Responsiveness */
 @media (min-width: 600px) {
     main {
-        grid-template-columns: 2fr 1fr; /* Dos columnas en pantallas más grandes */
+        grid-template-columns: 2fr 1fr; /* Two columns bigger screen */
     }
     
     .aboutme {
-        flex-direction: row; /* Regresar a fila en pantallas más grandes */
-        justify-content: flex-start; /* Alinear a la izquierda */
+        flex-direction: row;
+        justify-content: flex-start;
     }
 
     .profile-photo {
-        max-width: 100px; /* Tamaño ajustado para pantallas grandes */
+        max-width: 100px;
     }
 }
 
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5em;
-    }
     .profile-photo {
         max-width: 80px;
         max-height: 90px;
-        margin: auto;
     }
-    
+
+    nav {
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar los enlaces */
+        padding: 10px; /* Espaciado adicional */
+    }
+
+    nav a {
+        margin: 5px 0; /* Añadir margen entre los enlaces */
+        font-size: 1.2em; /* Aumentar tamaño de fuente para legibilidad */
+    }
+
+    /* Ajustes adicionales para la card */
+    .card ul {
+        margin-left: 0; /* Alinear a la izquierda en vista móvil */
+        padding: 0; /* Eliminar padding */
+    }
 }
