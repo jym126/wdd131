@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'exo 2', sans-serif;
     background-color: #f0f0f0;
     color: #333;
     display: flex;
@@ -45,21 +45,22 @@ nav {
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #1f6adb;
-    padding: 10px 0;
-    z-index: 1; /* Asegurarse de que esté visible */
+    padding: 4px 0;
+    margin-top: 10px;
+    z-index: 1;
 }
 
 nav a {
     color: #f6f8fa;
     text-decoration: none;
-    padding: 5px 10px;
+    padding: 5px 5px;
     transition: background-color 0.3s;
 }
 
 nav a:hover {
     background-color: #9acbf0;
     border-radius: 5px;
-    color: #0c3d5e;
+    color:#0c3d5e;
 }
 
 /* Main Layout with Grid */
@@ -182,19 +183,19 @@ footer {
     }
 
     nav {
-        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-        align-items: center; /* Centrar los enlaces */
-        padding: 10px; /* Espaciado adicional */
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
     }
 
     nav a {
-        margin: 5px 0; /* Añadir margen entre los enlaces */
-        font-size: 1.2em; /* Aumentar tamaño de fuente para legibilidad */
+        margin: 5px 0;
+        font-size: 1.2em;
     }
 
-    /* Ajustes adicionales para la card */
+    /* Aditional adjustment for card */
     .card ul {
-        margin-left: 0; /* Alinear a la izquierda en vista móvil */
-        padding: 0; /* Eliminar padding */
+        margin-left: 0;
+        padding: 0;
     }
 }
