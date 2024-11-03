@@ -144,11 +144,27 @@ h2 {
     margin: 10px 0;
 }
 
+/*style for SVG separator*/
 .separator {
     width: 90%;
     height: auto;
     display: block;
     margin: 0 auto;  
+}
+
+.separator-path {
+    stroke: url(#gradiente);
+    stroke-width: 0.5;
+}
+
+.stop1 {
+    stop-color: #242889;
+    stop-opacity: 1;
+}
+
+.stop2 {
+    stop-color: #bddbfb;
+    stop-opacity: 1;
 }
 
 /* Footer */
