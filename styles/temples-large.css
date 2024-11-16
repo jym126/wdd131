@@ -2,7 +2,6 @@
 
 /* Main */
 main {
-    display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     max-width: 600px;
