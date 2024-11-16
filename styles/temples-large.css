@@ -1,37 +1,43 @@
 @media screen and (min-width: 768px) {
 
-/* Main */
-main {
-    grid-template-columns: 1fr;
-    justify-content: center;
-    max-width: 600px;
-    text-align: center;
-}
+    /* Header */
+    header {
+        flex-direction: row; /* Cambia la dirección a fila en pantallas grandes */
+        justify-content: space-between; /* Centra horizontalmente */
+        align-items: center; /* Alinea verticalmente */
+    }
 
-/* Hide menu toggle button in larger views */
-#menu-toggle {
-    display: none;
-}
+    /* Main */
+    main {
+        max-width: 900px; /* Ajuste en el ancho del contenedor en pantallas grandes */
+        text-align: center;
+    }
 
-/* Show the navigation menu in larger views */
-#menu {
-    display: flex !important; /* Override the 'hidden' class applied in mobile */
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-}
+    /* #temple-gallery: 3 columnas en pantallas grandes */
+    #temple-gallery {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        gap: 1rem;
+    }
 
-#menu li {
-    list-style: none;
-}
+    /* Hide menu toggle button in larger views */
+    #menu-toggle {
+        display: none; /* Oculta el botón de menú en pantallas grandes */
+    }
 
-#menu a:hover {
-    background-color: #ddd;
-    border-radius: 5px;
-}
+    /* Show the navigation menu in larger views */
+    #menu {
+        display: flex;
+        flex-direction: row; /* Muestra el menú en fila */
+        justify-content: center;
+        gap: 1rem;
+    }
 
-#temple-gallery {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-}
+    #menu li {
+        list-style: none;
+    }
+
+    #menu a:hover {
+        background-color: #ddd;
+        border-radius: 5px;
+    }
 }
