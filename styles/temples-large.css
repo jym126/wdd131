@@ -2,32 +2,32 @@
 
     /* Header */
     header {
-        flex-direction: row; /* Cambia la dirección a fila en pantallas grandes */
-        justify-content: space-between; /* Centra horizontalmente */
-        align-items: center; /* Alinea verticalmente */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     /* Main */
     main {
-        max-width: 900px; /* Ajuste en el ancho del contenedor en pantallas grandes */
+        max-width: 900px;
         text-align: center;
     }
 
-    /* #temple-gallery: 3 columnas en pantallas grandes */
+    /* #temple-gallery: 3 big columns on screen */
     #temple-gallery {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
     }
 
     /* Hide menu toggle button in larger views */
     #menu-toggle {
-        display: none; /* Oculta el botón de menú en pantallas grandes */
+        display: none;
     }
 
     /* Show the navigation menu in larger views */
     #menu {
         display: flex;
-        flex-direction: row; /* Muestra el menú en fila */
+        flex-direction: row;
         justify-content: center;
         gap: 1rem;
     }
