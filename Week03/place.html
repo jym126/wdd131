@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asturias</title>
+  <script src="js/place.js" defer></script>
+  <link rel="stylesheet" href="/styles/place.css">
+</head>
+<body>
+  <header>
+    <h1>Asturias</h1>
+  </header>
+
+  <section id="hero">
+    <!-- Mobile View Image -->
+    <div class="hero-image-container">
+      <img src="/images/hero-image_min.webp" alt="Asturias landscape" class="mobile-hero-image">
+    </div>
+    
+    <!-- Boxes Section -->
+    <div class="hero-content">
+      <div class="hero-box" id="data">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 10,604 sq km</li>
+          <li><strong>Population:</strong> 1,005,206 (2023 estimate)</li>
+          <li><strong>Capital:</strong> Oviedo</li>
+          <li><strong>Languages:</strong> Spanish, Asturian (co-official but not widely used)</li>
+          <li><strong>Currency:</strong> Euro (€)</li>
+          <li><strong>Time Zone:</strong> UTC+1 (CET) / UTC+2 (CEST in summer)</li>
+          <li><strong>Calling Code:</strong> +34 (Spain)</li>
+          <li><strong>Internet TLD:</strong> .es</li>
+        </ul>
+      </div>
+      <div class="hero-box" id="weather">
+        <h2>Weather</h2>
+    <!-- Weather Icon -->
+    <svg class="weather-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="24" height="24">
+      <circle cx="20" cy="20" r="10" fill="#FFD93B" />
+      <line x1="20" y1="2" x2="20" y2="10" stroke="#FFD93B" stroke-width="2" />
+      <line x1="20" y1="30" x2="20" y2="38" stroke="#FFD93B" stroke-width="2" />
+      <line x1="2" y1="20" x2="10" y2="20" stroke="#FFD93B" stroke-width="2" />
+      <line x1="30" y1="20" x2="38" y2="20" stroke="#FFD93B" stroke-width="2" />
+      <line x1="5" y1="5" x2="12" y2="12" stroke="#FFD93B" stroke-width="2" />
+      <line x1="28" y1="28" x2="35" y2="35" stroke="#FFD93B" stroke-width="2" />
+      <line x1="5" y1="35" x2="12" y2="28" stroke="#FFD93B" stroke-width="2" />
+      <line x1="28" y1="12" x2="35" y2="5" stroke="#FFD93B" stroke-width="2" />
+      <path d="M45 30c-2 0-3 .5-4.5 1.3C38.7 27 35 24 30 24c-5.5 0-10 4.5-10 10 0 .5 0 1 .1 1.5C17.6 36 16 38.4 16 41c0 4 3 7 7 7h22c4 0 7-3 7-7s-3-7-7-7c-.8 0-1.5.1-2.2.3C47.5 32.6 46.4 30 45 30z" fill="#B0BEC5" />
+    </svg>
+        <ul>
+          <li><strong>Temperature:</strong> 16°C</li>
+          <li><strong>Conditions:</strong> Partly Cloudy</li>
+          <li><strong>Wind:</strong> 5 km/h</li>
+          <li><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> - Jose L. Martinez - Asturias, Spain</p>
+    <p>Last Modified: <span id="last-modified"></span></p>
+  </footer>
+</body>
+</html>

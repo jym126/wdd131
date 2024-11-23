@@ -1,0 +1,60 @@
+body {
+	font-family: Roboto, helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+h1 {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.banner {
+    text-align: center;
+    background-color: #c9c9cb;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns same width */
+    gap: 20px;
+}
+
+main > section {
+    grid-column: span 1; /* Each section occupies a column */
+}
+
+main > :not(section) {
+    grid-column: span 2; /* Other elements occupy the entire width */
+}
+
+
+h2 {
+	color: navy;
+	text-align: left;
+}
+
+article p {
+	text-align: justify;
+}
+
+.callout {
+	color: #fcfcfd;
+	background-color: #702990;
+    padding: 10px;
+}
+
+footer {
+	margin-top: 1rem;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	font-size: smaller;
+	text-align: left;
+    align-content: center;
+    background-color: #c9c9cb;
+    height: 40px;
+    padding: 10px;
+}
