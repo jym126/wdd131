@@ -107,7 +107,7 @@ header h1 {
 @media (min-width: 769px) {
     #hero {
         height: 100vh; /* Full viewport height */
-        background-image: url("https://github.com/jym126/wdd131/blob/main/images/hero-image.webp");
+        background-image: url("https://res.cloudinary.com/dmimages/image/upload/v1732357514/hero-image_kyjmfg.webp");
         background-size: cover;
         background-position: center;
         display: flex;
