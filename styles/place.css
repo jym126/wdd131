@@ -1,8 +1,8 @@
 /* Global CSS Variables */
 :root {
-    --primary-color: #d71a28; /* Red header/footer color */
+    --primary-color: #9619a1; /* Red header/footer color */
     --secondary-color: #0080ff; /* Blue secondary color */
-    --accent-color: #4caf50; /* Green box headers */
+    --accent-color: #704caf; /* Green box headers */
     --text-color: #333; /* Neutral text color */
     --bg-color: #fff; /* Background color */
     --box-bg-color: rgba(255, 255, 255, 0.9); /* Transparent white for boxes */
