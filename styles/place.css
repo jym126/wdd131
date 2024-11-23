@@ -12,6 +12,8 @@
 /* General Styles */
 body {
     margin: 0;
+    padding: 0;
+    height: 100vh;
     font-family: Arial, sans-serif;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -106,7 +108,6 @@ header h1 {
 /* Wide View */
 @media (min-width: 769px) {
     #hero {
-        height: 100vh; /* Full viewport height */
         background-image: url("https://raw.githubusercontent.com/jym126/wdd131/refs/heads/main/images/hero-image.webp");
         background-size: cover;
         background-position: center;
