@@ -1,0 +1,43 @@
+@media screen and (min-width: 768px) {
+
+    /* Header */
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Main */
+    main {
+        max-width: 900px;
+        text-align: center;
+    }
+
+    /* #temple-gallery: 3 big columns on screen */
+    #temple-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    /* Hide menu toggle button in larger views */
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Show the navigation menu in larger views */
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #menu li {
+        list-style: none;
+    }
+
+    #menu a:hover {
+        background-color: #ddd;
+        border-radius: 5px;
+    }
+}

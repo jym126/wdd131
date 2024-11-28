@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Coding</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Learn Coding!</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Lessons</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <p>Learn the basics of web development through interactive lessons and quizzes.</p>
+      <p>Start your journey with HTML, CSS, and JavaScript—the foundation of the web.</p>
+      <button onclick="alert('Let’s Start Learning!')">Get Started</button>
+    </section>
+    <section>
+      <h2>Why Learn Coding?</h2>
+      <ul>
+        <li>Coding helps you solve problems creatively.</li>
+        <li>It's a valuable skill in many career paths.</li>
+        <li>It’s fun to build your own projects!</li>
+      </ul>
+    </section>
+    <section id="scoreDisplay"></section>
+  </main>
+  <footer>
+    <p>E-Learning Site &copy; <span id="currentYear"></span>. Last modified: <span id="lastModified"></span></p>
+  </footer>
+  <script>
+    const previousScore = localStorage.getItem('quizScore');
+    const scoreDisplay = document.getElementById('scoreDisplay');
+    if (previousScore) {
+      scoreDisplay.innerHTML = `<p>Your last quiz score: ${previousScore}/3</p>`;
+    }
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>

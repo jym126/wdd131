@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz - Learn Coding</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="lessons.html">Lessons</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+  </header>
+  <main>
+    <form id="quizForm">
+      <div id="quizContainer"></div>
+      <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+    </form>
+    <p id="score"></p>
+    <section>
+      <h2>Review Your Knowledge</h2>
+      <p>Revisit the <a href="lessons.html">Lessons</a> page to improve your score!</p>
+    </section>
+  </main>
+  <footer>
+    <p>E-Learning Site &copy; <span id="currentYear"></span>. Last modified: <span id="lastModified"></span></p>
+  </footer>
+  <script src="/scripts/script.js"></script>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+  </script>
+</body>
+</html>
