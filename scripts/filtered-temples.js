@@ -45,7 +45,7 @@ const temples = [
     },
     {
       templeName: "Washington D.C.",
-      location: "Kensington, Maryland, United States",
+      location: "Kensington, ML, United St.",
       dedicated: "1974, November, 19",
       area: 156558,
       imageUrl:
@@ -67,6 +67,46 @@ const temples = [
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
+    {
+      templeName: "Santo Domingo",
+      location: "Santo Domingo, Rep. Dom.",
+      dedicated: "2000, September, 17",
+      area: 67000,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/santo-domingo-dominican-republic-temple/santo-domingo-dominican-republic-temple-13016.jpg"
+    },
+    {
+      templeName: "Madrid",
+      location: "Madrid, Spain",
+      dedicated: "1999, March, 19",
+      area: 45800,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/_temp/056-Madrid-Spain-Temple.jpg"
+    },
+    {
+      templeName: "Accra Ghanna",
+      location: "Accra, Ghanna",
+      dedicated: "1999, March, 19",
+      area: 17500,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
+    },
+    {
+      templeName: "Asunción Paraguay",
+      location: "Asunción Paraguay",
+      dedicated: "1983, December, 2",
+      area: 11906,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/asuncion-paraguay-temple/asuncion-paraguay-temple-6969-main.jpg"
+    },
+    {
+      templeName: "Manhattan",
+      location: "Manhattan, New York",
+      dedicated: "2004, June, 13",
+      area: 20630,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/manhattan-new-york-temple/manhattan-new-york-temple-40080-main.jpg"
+    },
     // Add more temple objects here...
   ];
 
@@ -84,48 +124,83 @@ menuToggle.addEventListener("click", () => {
     }
 });
 
-        // Select the gallery container
-        const gallery = document.getElementById('temple-gallery');
+// Select the gallery container
+  
+const gallery = document.getElementById('temple-gallery');
 
-        // Use forEach to loop through each temple in the array
-        temples.forEach(temple => {
-            // Create a div for each temple
-            const templeDiv = document.createElement('div');
-            templeDiv.className = 'temple';
-            templeDiv.style.border = "1px solid #ccc";
-            templeDiv.style.margin = "10px";
-            templeDiv.style.padding = "10px";
-            templeDiv.style.width = "400px";
+const home = document.querySelector("#home");
+const old = document.querySelector("#old");
+const bnew = document.querySelector("#new");
+const large = document.querySelector("#large");
+const small = document.querySelector("#small");
 
-            // Create the img element for the temple image
-            const img = document.createElement('img');
-            img.src = temple.imageUrl;
-            img.alt = `${temple.templeName} Image`;
-            img.style.width = "100%";
+home.addEventListener("click", ()=> {
+  createTemplesCards(temples.filter(temple=> temple.templeName !== null));
+});
 
-            // Create the h2 element for the temple name
-            const name = document.createElement('h2');
-            name.textContent = temple.templeName;
+old.addEventListener("click", ()=> {
+  createTemplesCards(temples.filter(temple=> parseInt(temple.dedicated.slice(0, 4)) < 1900));
+});
 
-            // Create the paragraph element for location
-            const location = document.createElement('p');
-            location.textContent = `Location: ${temple.location}`;
+bnew.addEventListener("click", ()=> {
+  createTemplesCards(temples.filter(temple=> parseInt(temple.dedicated.slice(0, 4)) > 2000));
+  
+});
 
-            // Create the paragraph element for dedication date
-            const dedicated = document.createElement('p');
-            dedicated.textContent = `Dedicated: ${temple.dedicated}`;
+large.addEventListener("click", ()=> {
+  createTemplesCards(temples.filter(temple=> temple.area > 90000 ));
+});
 
-            // Create the paragraph element for the area
-            const area = document.createElement('p');
-            area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
+small.addEventListener("click", ()=> {
+  createTemplesCards(temples.filter(temple=> temple.area < 10000 ));
+});
 
-            // Append all elements to the templeDiv
-            templeDiv.appendChild(name);
-            templeDiv.appendChild(location);
-            templeDiv.appendChild(dedicated);
-            templeDiv.appendChild(area);
-            templeDiv.appendChild(img);
-
-            // Append the templeDiv to the gallery container
-            gallery.appendChild(templeDiv);
-        });
+function createTemplesCards(data) {
+  gallery.innerHTML = ""
+  console.log(data)
+        
+  // Use forEach to loop through each temple in the array
+  data.forEach(temple => {
+    // Create a div for each temple
+    const templeDiv = document.createElement('div');
+      templeDiv.className = 'temple';
+      templeDiv.style.border = "1px solid #ccc";
+      templeDiv.style.margin = "10px";
+      templeDiv.style.padding = "20px";
+      templeDiv.style.width = "310px";
+      
+      // Create the img element for the temple image
+      const img = document.createElement('img');
+      img.src = temple.imageUrl;
+      img.alt = `${temple.templeName} Image`;
+      img.style.width = "100%";
+      img.style.margin = "10px 0";
+      img.loading = "lazy";
+      
+      // Create the h2 element for the temple name
+      const name = document.createElement('h2');
+      name.textContent = temple.templeName;
+      
+      // Create the paragraph element for location
+      const location = document.createElement('p');
+      location.textContent = `Location: ${temple.location}`;
+      
+      // Create the paragraph element for dedication date
+      const dedicated = document.createElement('p');
+      dedicated.textContent = `Dedicated: ${temple.dedicated}`;
+      
+      // Create the paragraph element for the area
+      const area = document.createElement('p');
+      area.textContent = `Area: ${temple.area.toLocaleString()} sq ft`;
+      
+      // Append all elements to the templeDiv
+      templeDiv.appendChild(name);
+      templeDiv.appendChild(location);
+      templeDiv.appendChild(dedicated);
+      templeDiv.appendChild(area);
+      templeDiv.appendChild(img);
+      
+      // Append the templeDiv to the gallery container
+      gallery.appendChild(templeDiv);
+    });
+}

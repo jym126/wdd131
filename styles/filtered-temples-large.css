@@ -17,6 +17,8 @@
     #temple-gallery {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+        margin: 0;
+        padding: 0;
     }
 
     /* Hide menu toggle button in larger views */
@@ -28,7 +30,7 @@
     #menu {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-around;
         gap: 1rem;
     }
 
