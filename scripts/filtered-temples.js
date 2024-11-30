@@ -157,8 +157,9 @@ small.addEventListener("click", ()=> {
 
 function createTemplesCards(data) {
   gallery.innerHTML = ""
-  console.log(data)
-        
+  if(data == []) {
+    data = temples
+  }
   // Use forEach to loop through each temple in the array
   data.forEach(temple => {
     // Create a div for each temple
