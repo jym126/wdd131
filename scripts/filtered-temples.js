@@ -160,6 +160,7 @@ function createTemplesCards(data) {
   if(data == []) {
     data = temples
   }
+  console.log(data)
   // Use forEach to loop through each temple in the array
   data.forEach(temple => {
     // Create a div for each temple
