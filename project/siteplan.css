@@ -1,0 +1,29 @@
+main {
+    font-family: "Montserrat";
+    text-align: center;
+    background-color: #0E79B2;
+    color: #F39237;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    background-color: #191923;
+    color: #FBFEF9;
+}
+
+h2 {
+    background-color:#FBFEF9;
+}
+
+h3 {
+    color: #FBFEF9;
+}
+
+img {
+    max-width: 1200px;
+}
+
+p {
+    color: #FBFEF9;
+}
