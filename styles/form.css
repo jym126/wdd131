@@ -2,7 +2,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    font-family: "Open Sans";
+    font-family: "Montserrat";
     background-color: #f9f9f9;
     color: #333;
     display: flex;
@@ -30,7 +30,7 @@ html, body {
 
   h1 {
     margin: 0;
-    font-size: 30px;
+    font-size: 25px;
   }
   
   form, section {
@@ -46,7 +46,7 @@ html, body {
     margin-bottom: 1em;
     border: 1px solid #ccc;
     border-radius: 4px;
-    padding: 0.5em;
+    padding: 0.4em;
   }
   
   .rating {
