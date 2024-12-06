@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Confirmation</title>
+  <link rel="stylesheet" href="styles/form-styles.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Review Submitted!</h1>
+    </header>
+
+    <section>
+      <h2>Your Review Details:</h2>
+      <p><strong>Product Name:</strong> <span id="productName"></span></p>
+      <p><strong>Overall Rating:</strong> <span id="rating"></span></p>
+      <p><strong>Date of Installation:</strong> <span id="installationDate"></span></p>
+      <p><strong>Features Found Useful:</strong> <span id="features"></span></p>
+      <p><strong>Written Review:</strong> <span id="writtenReview"></span></p>
+      <p><strong>Your Name:</strong> <span id="userName"></span></p>
+
+      <!-- New Post Review Button -->
+      <button id="newPostBtn" onclick="location.href='form.html'">Post Another Review</button>
+    </section>
+
+    <footer>
+      <span id="year"></span> - Jose L. Martinez - Spain
+      <br>
+      Last Modification: <span id="lastModified"></span>
+    </footer>
+  </main>
+
+  <script>
+    // Parse URL params and display on review page
+    const params = new URLSearchParams(window.location.search);
+
+    document.getElementById('productName').textContent = params.get('productName') || 'N/A';
+    document.getElementById('rating').textContent = params.get('rating') || 'N/A';
+    document.getElementById('installationDate').textContent = params.get('installationDate') || 'N/A';
+    document.getElementById('features').textContent = params.getAll('features').join(', ') || 'N/A';
+    document.getElementById('writtenReview').textContent = params.get('writtenReview') || 'N/A';
+    document.getElementById('userName').textContent = params.get('userName') || 'N/A';
+
+    // Update footer details
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
