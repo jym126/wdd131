@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="The best place to learn HTML, CSS and Javascript">
   <meta name="author" content="Jose L. Martinez">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Learn Coding</title>
   <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/home.css">
+  <script src="/scripts/script.js" defer></script>
 </head>
 <body>
   <header>
@@ -18,32 +23,73 @@
     </nav>
   </header>
   <main>
-    <section>
-      <p>Learn the basics of web development through interactive lessons and quizzes.</p>
-      <p>Start your journey with HTML, CSS, and JavaScript—the foundation of the web.</p>
-      <button onclick="alert('Let’s Start Learning!')">Get Started</button>
-    </section>
-    <section>
-      <h2>Why Learn Coding?</h2>
-      <ul>
-        <li>Coding helps you solve problems creatively.</li>
-        <li>It's a valuable skill in many career paths.</li>
-        <li>It’s fun to build your own projects!</li>
-      </ul>
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Master the Basics of Web Development</h1>
+        <p>Learn HTML, CSS, and JavaScript with simple lessons, interactive quizzes, and hands-on examples. Start coding today!</p>
+        <a href="lessons.html" class="btn">Get Started for Free</a>
     </section>
     <section id="scoreDisplay"></section>
-  </main>
+
+    <!-- Features Section -->
+    <section id="features">
+        <h2>Why Learn with Us?</h2>
+        <div class="feature-grid">
+            <div>
+                <h3>Interactive Quizzes</h3>
+                <p>Test your knowledge and track your progress.</p>
+            </div>
+            <div>
+                <h3>Hands-On Practice</h3>
+                <p>Learn by doing with real-world coding examples.</p>
+            </div>
+            <div>
+                <h3>Beginner-Friendly</h3>
+                <p>Structured lessons to make coding accessible.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits">
+        <h2>Benefits of Learning to Code</h2>
+        <div class="benefit-grid">
+            <div>
+                <h3>Enhance Problem-Solving Skills</h3>
+                <p>Coding improves logical thinking and creativity.</p>
+            </div>
+            <div>
+                <h3>Boost Career Opportunities</h3>
+                <p>Programming is a highly sought-after skill in today’s job market.</p>
+            </div>
+            <div>
+                <h3>Empower Your Ideas</h3>
+                <p>Turn your ideas into reality by building websites and apps.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Students Say</h2>
+        <blockquote>
+            "This site made learning HTML so simple! I now feel confident creating my own web pages." 
+            <cite>— Jane D., Student</cite>
+        </blockquote>
+    </section>
+
+    <!-- Blog/Resources Section -->
+    <section id="resources">
+        <h2>Recent Articles</h2>
+        <ul>
+            <li><a href="#">10 Tips for Beginner Coders</a></li>
+            <li><a href="#">Understanding the Basics of HTML</a></li>
+            <li><a href="#">Top 5 Free Tools for Web Development</a></li>
+        </ul>
+    </section>
+</main>
   <footer>
     <p>E-Learning Site &copy; <span id="currentYear"></span>. Last modified: <span id="lastModified"></span></p>
   </footer>
-  <script>
-    const previousScore = localStorage.getItem('quizScore');
-    const scoreDisplay = document.getElementById('scoreDisplay');
-    if (previousScore) {
-      scoreDisplay.innerHTML = `<p>Your last quiz score: ${previousScore}/3</p>`;
-    }
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-    document.getElementById('lastModified').textContent = document.lastModified;
-  </script>
 </body>
 </html>

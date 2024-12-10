@@ -1,0 +1,15 @@
+main {
+    padding: 10px;
+    z-index: -1000;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  summary::-webkit-details-marker {
+    color: blue;
+  }
+  summary:focus {
+    outline-style: none;
+  }

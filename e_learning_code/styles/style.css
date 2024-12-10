@@ -1,38 +1,50 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+  body {
+    font-family: "Montserrat", sans-serif;
+    margin: auto;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #191923;
     color: #333;
   }
   
   header {
-    background-color: #333;
-    color: #fff;
+    background-color: #f39237;
+    color: #191923;
     padding: 0.5em 0; /* Reduced header height */
     text-align: center;
+    width: 80%;
+    margin: 10px auto auto auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
   
   nav a {
-    color: #fff;
+    color: #191923;
     margin: 0 15px;
     text-decoration: none;
   }
   
   nav a:hover {
     text-decoration: underline;
+    color: #bf1363;
   }
   
   main {
+    margin: auto;
     padding: 2em;
+    width: 79%;
+    height: 70vh;
+    background-color: #FBFEF9;
   }
   
   footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #f39237;
+    color: #191923;
     text-align: center;
     padding: 1em 0;
-    margin-top: 2em;
+    width: 80%;
+    margin: auto;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   
   button {
