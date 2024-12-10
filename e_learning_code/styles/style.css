@@ -9,12 +9,16 @@
   header {
     background-color: #f39237;
     color: #191923;
-    padding: 0.5em 0; /* Reduced header height */
+    padding: 5px; /* Reduced header height */
     text-align: center;
     width: 80%;
     margin: 10px auto auto auto;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+  }
+
+  h1 {
+    margin: 0;
   }
   
   nav a {
@@ -32,7 +36,7 @@
     margin: auto;
     padding: 2em;
     width: 79%;
-    height: 70vh;
+    min-height: 70vh;
     background-color: #FBFEF9;
   }
   
@@ -40,7 +44,7 @@
     background-color: #f39237;
     color: #191923;
     text-align: center;
-    padding: 1em 0;
+    padding: 5px;
     width: 80%;
     margin: auto;
     border-bottom-left-radius: 10px;
