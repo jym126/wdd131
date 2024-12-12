@@ -1,7 +1,65 @@
 main {
-    padding: 10px;
-  }
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  padding: 10px;
+}
 
   section {
     padding: 10px;
+    grid-column: 1/2;
   }
+
+  .review {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  /* Quiz styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+}
+
+#quizForm {
+  margin-top: 20px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+.question p {
+  font-weight: bold;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#score {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+}

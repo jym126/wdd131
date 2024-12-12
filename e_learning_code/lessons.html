@@ -19,12 +19,45 @@
     </header>
     <main>
       <section>
-        <h2>HTML Basics</h2>
+        <h2>HTML: Basic Structure</h2>
         <details>
           <summary>
-            HTML is the structure of your webpage. It consists of tags like:
+            This is the basic structure of an HTML document.
           </summary>
-          <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></pre>
+          <pre><code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang="en"&gt;
+            &lt;head&gt;
+                &lt;meta charset="UTF-8"&gt;
+                &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                &lt;title&gt;Basic HTML Page&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;Welcome to My First Web Page!&lt;/h1&gt;
+                &lt;p&gt;This is a basic HTML page with a heading and a paragraph.&lt;/p&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+
+            </code></pre>
+          <p>
+            With JavaScript, you can handle events, create animations, and much
+            more!
+          </p>
+        </details>
+      </section>
+      <section>
+        <h2>JavaScript Loop</h2>
+        <details>
+          <summary>
+            Looping Through an Array:
+          </summary>
+          <pre><code>&lt;script&gt;
+            let fruits = ["Apple", "Banana", "Cherry"];
+            
+            for (let i = 0; i &lt; fruits.length; i++) {
+                console.log(fruits[i]);
+            }
+            &lt;/script&gt;</code></pre>
           <p>HTML helps create headings, paragraphs, links, and more!</p>
         </details>
       </section>
@@ -51,7 +84,7 @@
           </p>
         </details>
       </section>
-      <section>
+      <section class="resources">
         <h2>Additional Resources</h2>
         <p>Explore these resources to deepen your coding knowledge:</p>
         <ul>
