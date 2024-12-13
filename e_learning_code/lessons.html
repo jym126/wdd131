@@ -84,6 +84,20 @@
           </p>
         </details>
       </section>
+      <section class="form">
+        <form onsubmit="event.preventDefault(); mostrarAlerta();">
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br><br>
+  
+          <label for="correo">Correo:</label><br>
+          <input type="email" id="correo" name="correo" required><br><br>
+  
+          <label for="tema">Tema de interés:</label><br>
+          <input type="text" id="tema" name="tema" required><br><br>
+  
+          <button type="submit">Enviar</button>
+      </form>
+      </section>
       <section class="resources">
         <h2>Additional Resources</h2>
         <p>Explore these resources to deepen your coding knowledge:</p>

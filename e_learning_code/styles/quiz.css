@@ -11,18 +11,13 @@ main {
   }
 
   .review {
+    background-color: #0e79b2;
     grid-column: 2/3;
     grid-row: 1/2;
+    color: #fbfef9;
   }
 
   /* Quiz styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 20px;
-}
-
 header {
   text-align: center;
 }
