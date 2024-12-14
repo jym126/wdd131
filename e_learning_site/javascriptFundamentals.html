@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The best place to learn HTML, CSS and Javascript">
-    <meta name="author" content="Jose L. Martinez">
+    <meta
+      name="description"
+      content="The best place to learn HTML, CSS and Javascript"
+    />
+    <meta name="author" content="Jose L. Martinez" />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>JavaScript Course</title>
     <style>
@@ -45,28 +48,25 @@
         language. It was initially created to enhance interactivity in web
         browsers, allowing developers to dynamically modify the content of a web
         page, respond to user events, and communicate with the server without
-        reloading the page. Here are some key features of JavaScript:</p>
-        <h3>Client-Side Programming Language:</h3>
-        <p>
-            used for client-side
-            development to enhance the user experience in web browsers. Interpreted:
-            JavaScript is an interpreted language, meaning the code is executed line
-            by line without needing to be compiled beforehand. This means its source
-            code is not fully translated into machine code before execution but is
-            interpreted and run in real-time.
-        </p>
-        <h3>
-            Object-Oriented: 
-        </h3>
-        <p>
-            "Object-oriented"
-            refers to a programming paradigm that uses the concept of "objects" to
-            organize and structure code. In object-oriented programming (OOP),
-            objects are instances of classes, which serve as templates for creating
-            objects. Each object can contain data in the form of attributes and
-        </p>
-        functions in the form of methods.
+        reloading the page. Here are some key features of JavaScript:
       </p>
+      <h3>Client-Side Programming Language:</h3>
+      <p>
+        used for client-side development to enhance the user experience in web
+        browsers. Interpreted: JavaScript is an interpreted language, meaning
+        the code is executed line by line without needing to be compiled
+        beforehand. This means its source code is not fully translated into
+        machine code before execution but is interpreted and run in real-time.
+      </p>
+      <h3>Object-Oriented:</h3>
+      <p>
+        "Object-oriented" refers to a programming paradigm that uses the concept
+        of "objects" to organize and structure code. In object-oriented
+        programming (OOP), objects are instances of classes, which serve as
+        templates for creating objects. Each object can contain data in the form
+        of attributes and
+      </p>
+      <p>functions in the form of methods.</p>
       <h3>1. Basic Syntax Exercise</h3>
       <p>
         Create a variable to store your name and another for your age. Print a
@@ -100,7 +100,7 @@
         function determineSign(number) {
             if (number > 0) {
                 return "Positive";
-            } else if (number < 0) {
+            } else if (number &lt;<&gt; 0) {
     return "Negative";
 } else {
     return "Zero";
@@ -112,7 +112,7 @@ console.log(determineSign(7)); // Should print "Positive"
       <h3>4. Loop Exercise</h3>
       <p>Use a loop to print the numbers 1 through 5 in the console.</p>
       <pre><code>// Loop Exercise
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i &lt;<&gt;= 5; i++) {
     console.log(i);
 }
 </code></pre>
@@ -182,7 +182,7 @@ outerFunction(); // Should print "Hello from the outer function"
       <pre><code><!-- HTML -->
     <input type="text" id="textInput" placeholder="Enter your text">
     <button onclick="addText()">Add Text</button>
-    <p id="output"></p>
+    <div id="output"></div>
     
     <script>
         function addText() {
@@ -201,9 +201,9 @@ outerFunction(); // Should print "Hello from the outer function"
         visibility.
       </p>
       <pre><code><!-- HTML -->
-    <p>Element 1</p>
-    <p>Element 2</p>
-    <p>Element 3</p>
+    <div>Element 1</div>
+    <div>Element 2</div>
+    <div>Element 3</div>
     <button onclick="showElements()">Show Elements</button>
     <button onclick="hideElements()">Hide Elements</button>
     
