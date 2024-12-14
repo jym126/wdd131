@@ -1,5 +1,5 @@
-// Define the quiz questions and answers
-const questions = [
+// Define the first quiz questions and answers
+const questions1 = [
   {
     question: "What does HTML stand for?",
     options: ["Hyper Text Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"],
@@ -64,15 +64,72 @@ const questions = [
   }
 ];
 
+// Define the second quiz questions and answers
+const questions2 = [
+  {
+    question: "What is the correct syntax for referring to an external JavaScript file?",
+    options: ["<script src='file.js'>", "<script href='file.js'>", "<script link='file.js'>"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which method is used to round a number to the nearest integer in JavaScript?",
+    options: ["Math.round()", "Math.ceil()", "Math.floor()"],
+    correctAnswer: 0
+  },
+  {
+    question: "What does DOM stand for?",
+    options: ["Document Object Model", "Data Object Manipulation", "Document Oriented Methodology"],
+    correctAnswer: 0
+  },
+  {
+    question: "Which JavaScript keyword is used to declare a block-scoped variable?",
+    options: ["var", "let", "block"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which of the following is a correct way to create an array in JavaScript?",
+    options: ["let arr = [1, 2, 3];", "let arr = {1, 2, 3};", "let arr = (1, 2, 3);"],
+    correctAnswer: 0
+  },
+  {
+    question: "How do you write an 'if' statement in JavaScript?",
+    options: ["if i == 5 then", "if (i == 5)", "if i = 5"],
+    correctAnswer: 1
+  },
+  {
+    question: "Which operator is used to assign a value to a variable in JavaScript?",
+    options: ["=", "==", "==="],
+    correctAnswer: 0
+  },
+  {
+    question: "What is the output of: console.log(typeof null)?",
+    options: ["null", "object", "undefined"],
+    correctAnswer: 1
+  },
+  {
+    question: "How can you add a comment in JavaScript?",
+    options: ["// This is a comment", "<!-- This is a comment -->", "# This is a comment"],
+    correctAnswer: 0
+  },
+  {
+    question: "What will be the output of: console.log(2 + '2')?",
+    options: ["22", "4", "undefined"],
+    correctAnswer: 0
+  }
+];
+
+// Current quiz variable
+let currentQuiz = questions1;
+
 // Dynamically generate the quiz questions and options
 function loadQuiz() {
   const quizContainer = document.getElementById('quizContainer');
   quizContainer.innerHTML = ''; // Clear any existing content
-  
-  questions.forEach((question, index) => {
+
+  currentQuiz.forEach((question, index) => {
     const questionElement = document.createElement('div');
     questionElement.classList.add('question');
-    
+
     const questionText = document.createElement('p');
     questionText.textContent = `${index + 1}. ${question.question}`;
     questionElement.appendChild(questionText);
@@ -85,7 +142,7 @@ function loadQuiz() {
       `;
       questionElement.appendChild(label);
     });
-    
+
     quizContainer.appendChild(questionElement);
   });
 }
@@ -93,10 +150,10 @@ function loadQuiz() {
 // Submit the quiz and calculate the score
 function submitQuiz() {
   let score = 0;
-  
-  questions.forEach((question, index) => {
+
+  currentQuiz.forEach((question, index) => {
     const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
-    
+
     if (selectedOption) {
       const answerIndex = parseInt(selectedOption.value);
       if (answerIndex === question.correctAnswer) {
@@ -104,21 +161,35 @@ function submitQuiz() {
       }
     }
   });
-  
-  document.getElementById('score').textContent = `Your score: ${score} / ${questions.length}`;
+
+  document.getElementById('score').textContent = `Your score: ${score} / ${currentQuiz.length}`;
+}
+
+// Switch quiz function
+function switchQuiz() {
+  currentQuiz = currentQuiz === questions1 ? questions2 : questions1;
+  loadQuiz();
+  document.getElementById('score').textContent = ''; // Clear the score
 }
 
 // Display current year and last modified date
 function displayFooterInfo() {
   const currentYear = new Date().getFullYear();
   const lastModified = new Date(document.lastModified).toLocaleDateString();
-  
+
   document.getElementById('currentYear').textContent = currentYear;
   document.getElementById('lastModified').textContent = lastModified;
 }
 
 // Initialize quiz on page load
-window.onload = function() {
+window.onload = function () {
   loadQuiz();
   displayFooterInfo();
+
+  // Add the "Another Quiz?" button
+  const myDiv = document.getElementById('newQuiz');
+  const switchButton = document.createElement('button');
+  switchButton.textContent = 'Another Quiz?';
+  switchButton.onclick = switchQuiz;
+  myDiv.appendChild(switchButton);
 };

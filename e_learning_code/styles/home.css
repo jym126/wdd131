@@ -1,40 +1,4 @@
-/* main {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-    padding: 10px;
-  }
-
-  #hero {
-    grid-column: 1/3;
-    text-align: center;
-    grid-row: 1/2;
-    padding: 5px;
-  }
-
-  #features {
-    grid-column: 1/2;
-    grid-row:2/3;
-    margin: 0 0 0 60px;
-  }
-
-  img {
-    border-radius: 5px;
-    box-shadow: 10px 10px 0 #2980b9, 20px 20px 0 #1c5985;
-  }
-  #benefits {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    margin-left: 40px;
-    padding-top: 10px;
-  }
-
-  #testimonials {
-    grid-column: 1/3;
-    grid-row: 3/4;
-    text-align: center;
-  } */
-  
+ 
   main {
     display: flex;
     flex-direction: column;

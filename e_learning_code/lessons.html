@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="The best place to learn HTML, CSS and Javascript">
-    <meta name="author" content="Jose L. Martinez">
+    <meta
+      name="description"
+      content="The best place to learn HTML, CSS and Javascript"
+    />
+    <meta name="author" content="Jose L. Martinez" />
     <title>Lessons - Learn Coding</title>
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/lessons.css" />
@@ -25,9 +28,7 @@
         <section>
           <h2>HTML: Basic Structure</h2>
           <details>
-            <summary>
-              This is the basic structure of an HTML document.
-            </summary>
+            <summary>This is the basic structure of an HTML document.</summary>
             <pre><code>
               &lt;!DOCTYPE html&gt;
               &lt;html lang="en"&gt;
@@ -44,24 +45,22 @@
               
             </code></pre>
             <p>
-              With JavaScript, you can handle events, create animations, and much
-              more!
+              With JavaScript, you can handle events, create animations, and
+              much more!
             </p>
           </details>
         </section>
         <section>
-        <h2>JavaScript Loop</h2>
-        <details>
-          <summary>
-            Looping Through an Array:
-          </summary>
-          <pre><code>&lt;script&gt;
+          <h2>JavaScript Loop</h2>
+          <details>
+            <summary>Looping Through an Array:</summary>
+            <pre><code>
             let fruits = ["Apple", "Banana", "Cherry"];
             
             for (let i = 0; i &lt; fruits.length; i++) {
               console.log(fruits[i]);
             }
-            &lt;/script&gt;</code></pre>
+            </code></pre>
             <p>HTML helps create headings, paragraphs, links, and more!</p>
           </details>
         </section>
@@ -83,43 +82,118 @@
             </summary>
             <pre><code>console.log('Hello, World!');</code></pre>
             <p>
-              With JavaScript, you can handle events, create animations, and much
-              more!
+              With JavaScript, you can handle events, create animations, and
+              much more!
             </p>
           </details>
         </section>
+        <section>
+          <h2>JavaScript Messages</h2>
+          <details>
+            <summary>
+              Showing messages with JavaScript.
+            </summary>
+            <h1>JavaScript: Mostrar un Mensaje</h1>
+            <pre>
+        &lt;button onclick="displayMessage()"&gt;Click Me!&lt;/button&gt;
+        &lt;p id="message"&gt;&lt;/p&gt;
+        
+        &lt;script&gt;
+            function displayMessage() {
+                document.getElementById("message").innerText = "Hello, welcome to coding!";
+            }
+        &lt;/script&gt;
+            </pre>
+            <p>
+              With JavaScript, you can show a pop up message associated to an event.
+            </p>
+          </details>
+        </section>
+        <section>
+          <h2>JavaScript Variables</h2>
+          <details>
+            <summary>
+              Learn about different types of data.
+            </summary>
+            <h1>JavaScript: Variables y Tipos de Datos</h1>
+            <pre>
+        &lt;script&gt;
+        // Declare variables
+        let name = "Alice";    // String
+        let age = 25;          // Number
+        let isStudent = true;  // Boolean
+        
+        // Display the values
+        console.log("Name: " + name);
+        console.log("Age: " + age);
+        console.log("Is student: " + isStudent);
+        &lt;/script&gt;
+            </pre>
+            <p>
+              You will lear to how to create variables according to the especific data format
+            </p>
+          </details>
+        </section>
+        <section>
+          <h2>CSS hover effect</h2>
+          <details>
+            <summary>
+              Creating an effect when mouse is over an element in your web page.
+            </summary>
+            <pre>
+              button {
+                padding: 10px 20px;
+                font-size: 16px;
+                cursor: pointer;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+              }
+              
+              button:hover {
+                background-color: #45a049;
+              }
+            </pre>
+            <p>
+              With CSS, you can handle events passing the mouse over an element
+            </p>
+          </details>
+        </section>
+        
       </div>
 
       <div class="learning">
         <section class="form">
           <form onsubmit="mostrarAlerta();">
-            <label for="nombre">Name:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            
-            <label for="correo">Mail:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-            
-          <label for="tema">Topic of interest:</label><br>
-          <input type="text" id="topic" name="topic" required><br><br>
-          
-          <button type="submit">Ask for info</button>
-        </form>
-      </section>
-      <section class="resources">
-        <h2>Additional Resources</h2>
-        <p>Explore these resources to deepen your coding knowledge:</p>
-        <ul>
-          <li>
-            <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
-          </li>
-          <li>
-            <a href="https://developer.mozilla.org/" target="_blank"
-            >MDN Web Docs</a
-            >
-          </li>
-        </ul>
-      </section>
-    </div>
+            <label for="nombre">Name:</label><br />
+            <input type="text" id="name" name="name" required /><br /><br />
+
+            <label for="correo">Mail:</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+
+            <label for="tema">Topic of interest:</label><br />
+            <input type="text" id="topic" name="topic" required /><br /><br />
+
+            <button type="submit">Ask for info</button>
+          </form>
+        </section>
+        <h3>Go to our <a href="/javascriptFundamentals.html">JavaScript Fundamentals</a> course now</h3>
+        <section class="resources">
+          <h2>Additional Resources</h2>
+          <p>Explore these resources to deepen your coding knowledge:</p>
+          <ul>
+            <li>
+              <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>
+            </li>
+            <li>
+              <a href="https://developer.mozilla.org/" target="_blank"
+                >MDN Web Docs</a
+              >
+            </li>
+          </ul>
+        </section>
+      </div>
     </main>
     <footer>
       <p>

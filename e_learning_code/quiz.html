@@ -21,16 +21,24 @@
   </header>
   
   <main>
-    <form id="quizForm">
-      <h2>Test your knowledge</h2>
-      <div id="quizContainer"></div>
-      <button type="button" onclick="submitQuiz()">Submit Quiz</button>
-      <p id="score"></p>
-    </form>
+    <section class="block1">
+      <section class="top">
+        <h2>Test your knowledge</h2>
+        <div id="newQuiz"></div>
+      </section>
+      <form id="quizForm">
+        <div id="quizContainer"></div>
+        <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+        <p id="score"></p>
+      </form>
+    </section>
     <section class="review">
-      <h2>Review Your Knowledge</h2>
+      <h3>Review Your Knowledge</h3>
       <p>Revisit the <a href="lessons.html">Lessons</a> page to improve your score!</p>
-      <img src="/tips.jpg" alt="code tips" width="500" loading="lazy">
+      <hr>
+      <h3>Today's Tips</h3>
+      <img src="/images/tips.jpg" alt="code tips" width="500" loading="lazy">
+      <h3>Go to our <a href="/javascriptFundamentals.html">Javscfript Fundamentals</a> course</h3>
     </section>
   </main>
   
