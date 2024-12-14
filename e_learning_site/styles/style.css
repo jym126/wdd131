@@ -22,10 +22,11 @@
   }
   
   nav a {
-    color: #FBFEF9;
+    color: #191923;
     margin: 0 15px;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 30px;
+    font-weight:500;
   }
   
   nav a:hover {
