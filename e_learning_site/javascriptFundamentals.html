@@ -280,14 +280,14 @@ outerFunction(); // Should print "Hello from the outer function"
       <h2>Module 8: AJAX and Fetch API</h2>
       <h3>15. Fetch GET Request Exercise</h3>
       <p>Search Wikipedia and display the results in a list.</p>
-      <pre><code><!-- HTML -->
+
     <input type="text" id="searchTerm" placeholder="Enter search term">
     <button onclick="searchWikipedia()">Search Wikipedia</button>
     <p id="results"></p>
-    
-    <script>
+    <div class="code">
+      <script>
         async function searchWikipedia() {
-            const term = document.getElementById('searchTerm').value;
+          const term = document.getElementById('searchTerm').value;
             const resultsList = document.getElementById('results');
             try {
                 const response = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${term}&format=json&origin=*`);
@@ -299,12 +299,11 @@ outerFunction(); // Should print "Hello from the outer function"
                     resultsList.appendChild(li);
                 });
             } catch (error) {
-                console.error('Error:', error);
+              console.error('Error:', error);
             }
-        }
-    </script>
-</code></pre>
-
+          }
+          </script>
+</div>
       <h3>16. Fetch POST Request Exercise</h3>
       <p>Create a form to send user data using Fetch POST.</p>
       <div class="code">
