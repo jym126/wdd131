@@ -229,7 +229,7 @@ outerFunction(); // Should print "Hello from the outer function"
           <img src="./images/image2.png" alt="Image 2" width="200" loading="lazy">
           <img src="./images/image3.jpg" alt="Image 3" width="200" loading="lazy">
         </div>
-        <img src="mainImage.jpg" id="mainImage" alt="Main Image">
+        <img src="./images/mainImage.jpg" id="mainImage" alt="Main Image" width="200" loading="lazy">
         
         <script>
             document.getElementById('gallery').addEventListener('click', function(event) {
@@ -242,14 +242,14 @@ outerFunction(); // Should print "Hello from the outer function"
 
       <h3>12. Keyboard Event Exercise</h3>
       <p>
-        Create a text box that logs each key pressed along with its ASCII code.
+        Create a text box that shows each key pressed along with its ASCII code.
       </p>
       <pre><code><!-- HTML -->
-    <input type="text" id="textBox">
+    <input type="text" id="textBox"><label id="ascii"></label>
     <script>
         const textBox = document.getElementById('textBox');
         textBox.addEventListener('keydown', function(event) {
-            console.log(`Key pressed: ${event.key}, ASCII Code: ${event.keyCode}`);
+            document.getElementById('ascii').innerHTML = (` ASCII Code: ${event.keyCode}`); 
         });
     </script>
 </code></pre>
@@ -344,18 +344,19 @@ outerFunction(); // Should print "Hello from the outer function"
         <input type="email" id="email" name="email" required>
         
         <button type="button" onclick="submitForm()">Submit</button>
+        <p id="result"></p>
     </form>
     
     <script>
         function submitForm() {
             const form = document.getElementById('userForm');
             const formData = new FormData(form);
-            fetch('YOUR_API_ENDPOINT', {
+            fetch('https://jsonplaceholder.typicode.com/users', {
                 method: 'POST',
-                body: formData
+                body: JSON.stringify(formData)
             })
             .then(response => response.json())
-            .then(data => console.log('Response:', data))
+            .then(data => document.getElementById('result').innerHTML =`Record created: ${data.id}`)
             .catch(error => console.error('Error:', error));
         }
     </script>
