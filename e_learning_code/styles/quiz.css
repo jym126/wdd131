@@ -1,60 +1,71 @@
-main {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto auto;
-  padding: 10px;
-}
+ main {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+ }
 
-  section {
-    padding: 10px;
-    grid-column: 1/2;
-  }
+ .review {
+   background-color: #0e79b2;
+   grid-column: 2/3;
+   grid-row: 1/2;
+   color: #fbfef9;
+   border-radius: 10px;
+   padding: 20px;
+ }
 
-  .review {
-    background-color: #0e79b2;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    color: #fbfef9;
-  }
+ #quizForm {
+   margin-top: 20px;
+   padding: 20px;
+ }
 
-  /* Quiz styles */
-header {
-  text-align: center;
-}
+ .question {
+   margin-bottom: 20px;
+ }
 
-#quizForm {
-  margin-top: 20px;
-}
+ .question p {
+   font-weight: bold;
+ }
 
-.question {
-  margin-bottom: 20px;
-}
+ button {
+   padding: 10px 20px;
+   font-size: 16px;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+ }
 
-.question p {
-  font-weight: bold;
-}
+ button:hover {
+   background-color: #45a049;
+ }
 
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+ #score {
+   font-size: 18px;
+   font-weight: bold;
+   margin-top: 20px;
+ }
 
-button:hover {
-  background-color: #45a049;
-}
+ footer {
+   text-align: center;
+ }
 
-#score {
-  font-size: 18px;
-  font-weight: bold;
-  margin-top: 20px;
-}
+ h2 {
+   color: #0e79b2;
+ }
 
-footer {
-  text-align: center;
-  margin-top: 40px;
-}
+
+ @media screen and (max-width: 960px) {
+   main {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     padding: 20px;
+     gap: 20px;
+   }
+
+   img {
+     width: 100%;
+   }
+
+ }

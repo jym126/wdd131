@@ -8,12 +8,12 @@ if (previousScore) {
 }
 
 function mostrarAlerta() {
-  const nombre = document.getElementById('nombre').value;
-  const tema = document.getElementById('tema').value;
+  const nombre = document.getElementById('name').value;
+  const tema = document.getElementById('topic').value;
 
   if (nombre && tema) {
-      alert(`¡Bienvenido, ${nombre}! Te enviaremos más información sobre "${tema}" pronto.`);
+      alert(`Welcome, ${nombre}! We will send you more information about "${tema}" soon.`);
   } else {
-      alert('Por favor, completa todos los campos antes de enviar el formulario.');
+      alert('Please, complete all fields befor asking for info.');
   }
 }
