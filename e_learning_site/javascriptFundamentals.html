@@ -179,9 +179,8 @@ outerFunction(); // Should print "Hello from the outer function"
       <pre><code><!-- HTML -->
     <input type="text" id="textInput" placeholder="Enter your text">
     <button onclick="addText()">Add Text</button>
-    <div id="output"></div>
-    
     <script>
+      <div id="output"></div>
         function addText() {
             const input = document.getElementById('textInput').value;
             const output = document.getElementById('output');
@@ -198,9 +197,9 @@ outerFunction(); // Should print "Hello from the outer function"
         visibility.
       </p>
       <pre><code><!-- HTML -->
-    <div>Element 1</div>
-    <div>Element 2</div>
-    <div>Element 3</div>
+    <li>Element 1</li>
+    <li>Element 2</li>
+    <li>Element 3</li>
     <button onclick="showElements()">Show Elements</button>
     <button onclick="hideElements()">Hide Elements</button>
     
@@ -221,11 +220,11 @@ outerFunction(); // Should print "Hello from the outer function"
         main display image.
       </p>
       <pre><code><!-- HTML -->
-      <div id="gallery">
+      <ul id="gallery">
           <img src="./images/image1.jpg" alt="Image 1" width="200" loading="lazy">
           <img src="./images/image2.png" alt="Image 2" width="200" loading="lazy">
           <img src="./images/image3.jpg" alt="Image 3" width="200" loading="lazy">
-        </div>
+      </ul>
         <img src="./images/mainImage.jpg" id="mainImage" alt="Main Image" width="200" loading="lazy">
         
         <script>
