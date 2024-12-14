@@ -1,0 +1,18 @@
+h1,
+h2 {
+  color: #333;
+}
+pre, .code {
+  background: #f4f4f4;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+code {
+  font-family: monospace;
+  color: #c7254e;
+  background: #f9f2f4;
+  padding: 2px 4px;
+  border-radius: 4px;
+}

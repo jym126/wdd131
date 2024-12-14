@@ -6,33 +6,9 @@
     <meta name="description" content="The best place to learn HTML, CSS and Javascript">
     <meta name="author" content="Jose L. Martinez">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/course.css">
     <title>JavaScript Course</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        padding: 0 20px;
-      }
-      h1,
-      h2 {
-        color: #333;
-      }
-      pre {
-        background: #f4f4f4;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        overflow-x: auto;
-      }
-      code {
-        font-family: monospace;
-        color: #c7254e;
-        background: #f9f2f4;
-        padding: 2px 4px;
-        border-radius: 4px;
-      }
-    </style>
+
   </head>
   <body>
     <main>
@@ -196,14 +172,14 @@ outerFunction(); // Should print "Hello from the outer function"
         Create a list of paragraphs with "Show" and "Hide" buttons to toggle
         visibility.
       </p>
-      <pre><!-- HTML -->
+<div class="code">
+  <p id="element1">Element 1</p>
+  <p id="element2">Element 2</p>
+  <p id="element3">Element 3</p>
 
-        <p id="element1">Element 1</p>
-        <p id="element2">Element 2</p>
-        <p id="element3">Element 3</p>
-
-    <button onclick="showElements()">Show Elements</button>
-    <button onclick="hideElements()">Hide Elements</button>
+<button onclick="showElements()">Show Elements</button>
+<button onclick="hideElements()">Hide Elements</button>
+</div>
     
     <script>
         function showElements() {
@@ -213,7 +189,6 @@ outerFunction(); // Should print "Hello from the outer function"
             document.querySelectorAll('p').forEach(el => el.style.display = 'none');
         }
 </script>
-</pre>
 
       <h2>Module 6: JavaScript Events</h2>
       <h3>11. Event Delegation Exercise</h3>
@@ -221,7 +196,7 @@ outerFunction(); // Should print "Hello from the outer function"
         Use event delegation for a gallery where clicking an image updates a
         main display image.
       </p>
-      <pre>
+
       <div id="gallery">
           <img src="./images/image1.jpg" alt="Image 1" width="200" loading="lazy">
           <img src="./images/image2.png" alt="Image 2" width="200" loading="lazy">
@@ -236,21 +211,20 @@ outerFunction(); // Should print "Hello from the outer function"
                 }
             });
         </script>
-</pre>
 
       <h3>12. Keyboard Event Exercise</h3>
       <p>
         Create a text box that shows each key pressed along with its ASCII code.
       </p>
-      <pre><code><!-- HTML -->
-    <input type="text" id="textBox"><label id="ascii"></label>
-    <script>
-        const textBox = document.getElementById('textBox');
-        textBox.addEventListener('keydown', function(event) {
-            document.getElementById('ascii').innerHTML = (` ASCII Code: ${event.keyCode}`); 
-        });
+<div class="code">
+  <input type="text" id="textBox"><label id="ascii"></label>
+  </div>
+  <script>
+    const textBox = document.getElementById('textBox');
+    textBox.addEventListener('keydown', function(event) {
+      document.getElementById('ascii').innerHTML = (` ASCII Code: ${event.keyCode}`); 
+    });
     </script>
-</code></pre>
 
       <h2>Module 7: JavaScript Asynchrony</h2>
       <h3>13. Promises Exercise</h3>
@@ -333,7 +307,7 @@ outerFunction(); // Should print "Hello from the outer function"
 
       <h3>16. Fetch POST Request Exercise</h3>
       <p>Create a form to send user data using Fetch POST.</p>
-      <pre>
+      <div class="code">
     <form id="userForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -358,7 +332,7 @@ outerFunction(); // Should print "Hello from the outer function"
             .catch(error => console.error('Error:', error));
         }
     </script>
-</pre>
+</div>
       <h3 style="text-align: center"><a href="index.html">Back to home</a></h3>
     </main>
   </body>
