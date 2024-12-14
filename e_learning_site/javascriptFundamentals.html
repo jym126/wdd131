@@ -196,7 +196,7 @@ outerFunction(); // Should print "Hello from the outer function"
         Create a list of paragraphs with "Show" and "Hide" buttons to toggle
         visibility.
       </p>
-      <pre><code><!-- HTML -->
+      <pre><!-- HTML -->
         <ul>
           <li id="element1">Element 1</li>
           <li id="element2">Element 2</li>
@@ -213,7 +213,7 @@ outerFunction(); // Should print "Hello from the outer function"
             document.querySelectorAll('p').forEach(el => el.style.display = 'none');
         }
 </script>
-</code></pre>
+</pre>
 
       <h2>Module 6: JavaScript Events</h2>
       <h3>11. Event Delegation Exercise</h3>
@@ -221,7 +221,7 @@ outerFunction(); // Should print "Hello from the outer function"
         Use event delegation for a gallery where clicking an image updates a
         main display image.
       </p>
-      <pre><code><!-- HTML -->
+      <pre>
       <ul id="gallery">
           <img src="./images/image1.jpg" alt="Image 1" width="200" loading="lazy">
           <img src="./images/image2.png" alt="Image 2" width="200" loading="lazy">
@@ -236,7 +236,7 @@ outerFunction(); // Should print "Hello from the outer function"
                 }
             });
         </script>
-</code></pre>
+</pre>
 
       <h3>12. Keyboard Event Exercise</h3>
       <p>
@@ -309,7 +309,7 @@ outerFunction(); // Should print "Hello from the outer function"
       <pre><code><!-- HTML -->
     <input type="text" id="searchTerm" placeholder="Enter search term">
     <button onclick="searchWikipedia()">Search Wikipedia</button>
-    <ul id="results"></ul>
+    <p id="results"></p>
     
     <script>
         async function searchWikipedia() {
@@ -333,7 +333,7 @@ outerFunction(); // Should print "Hello from the outer function"
 
       <h3>16. Fetch POST Request Exercise</h3>
       <p>Create a form to send user data using Fetch POST.</p>
-      <pre><code><!-- HTML -->
+      <pre>
     <form id="userForm">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
@@ -358,7 +358,7 @@ outerFunction(); // Should print "Hello from the outer function"
             .catch(error => console.error('Error:', error));
         }
     </script>
-</code></pre>
+</pre>
       <h3 style="text-align: center"><a href="index.html">Back to home</a></h3>
     </main>
   </body>
